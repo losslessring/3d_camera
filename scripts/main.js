@@ -24,15 +24,9 @@ const perspTransform = (points, k) => {
 	return result
 }
 
-// console.log(points)
 
-// let moved_points = points.map((point) =>{
-// 	return {
-// 			 x: point.x + 100,
-// 			 y: point.y + 100,
-// 			 z: point.z + 100
-// 			}
-// })
+
+
 
 
 let projected_polygons = polygons.map((polygon) => {
@@ -44,21 +38,7 @@ let projected_polygons = polygons.map((polygon) => {
 console.log(projected_polygons)
 drawPolygons(projected_polygons)
 
-// persp_transform(moved_points, 100).forEach((point, i, points) => {
-	
-// 	if (i < points.length - 1){
-// 		drawLine(point, points[i+1])	
-// 	}
-// 	//console.log(points[i])
-// })
 
-// persp_transform(moved_points, 100).forEach((point, i, points) => {
-	
-// 	if (i < points.length - 4){
-// 		drawLine(point, points[i+4])	
-// 	}
-
-// })
 
 //Получилась центральная проекция
 // Научиться поворачивать камеру
@@ -72,4 +52,4 @@ drawPolygons(projected_polygons)
 
 // или может drawPolygons чтобы рисовала все полигоны в цикле
 
-// console.log(polygons)
+//Реализовать матрицы поворота, масштабирования, перемещения

@@ -2,14 +2,24 @@ import Point from './point.js'
 
 import Polygon from './polygon.js'
 
-let points =   [new Point(0, 0, 0),
-				new Point(100, 0, 0),
-				new Point(100, 100, 0),
-				new Point(0, 100, 0),
-				new Point(0, 0, 100),
-				new Point(100, 0, 100),
-				new Point(100, 100, 100),
-				new Point(0, 100, 100)]
+let original_points =   [
+					new Point(0, 0, 0),
+					new Point(100, 0, 0),
+					new Point(100, 100, 0),
+					new Point(0, 100, 0),
+					new Point(0, 0, 100),
+					new Point(100, 0, 100),
+					new Point(100, 100, 100),
+					new Point(0, 100, 100)
+			   ]
+
+let points = original_points.map((point) =>{
+	return {
+			 x: point.x + 100,
+			 y: point.y + 100,
+			 z: point.z + 100
+			}
+})
 
 //По часовой стрелке, нормаль будет показывать в сторону часовой стрелки, или ноборот, потом решу
 let polygons = [
